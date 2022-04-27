@@ -58,3 +58,8 @@ function hideLoader()
     $("#loader").hide();
     $("#result-container").show();
 }
+
+function getAboutPage() {
+    
+    window.location.href = "http://localhost:3000/app/aboutPage.html"; 
+}
