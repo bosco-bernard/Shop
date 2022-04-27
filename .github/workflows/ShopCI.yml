@@ -4,7 +4,8 @@ on:
   push:
     branches: [ main , aboutFeature ]
 jobs:  
-  CI_Test:    
+  CI_Test: 
+    name: Integration Test
     runs-on: ubuntu-latest
     steps:
     - name: Checkout the repository
