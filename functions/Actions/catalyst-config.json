@@ -1,0 +1,10 @@
+{
+	"deployment": {
+		"name": "Actions",
+		"stack": "java8",
+		"type": "event"
+	},
+	"execution": {
+		"main": "ActionEvent"
+	}
+}

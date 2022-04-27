@@ -1,0 +1,10 @@
+{
+	"deployment": {
+		"name": "ShopAIO",
+		"stack": "java8",
+		"type": "advancedio"
+	},
+	"execution": {
+		"main": "ShopAIO"
+	}
+}

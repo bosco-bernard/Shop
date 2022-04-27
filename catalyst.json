@@ -1,0 +1,18 @@
+{
+  "functions": {
+    "targets": [
+      "ShopAIO",
+      "Actions"
+    ],
+    "ignore": [
+      ".output"
+    ],
+    "scripts": {      
+      "postserve" : "echo hai"
+    },
+    "source": "functions"
+  },
+  "client": {
+    "source": "client"
+  }
+}

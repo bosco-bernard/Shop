@@ -1,0 +1,29 @@
+{
+  "defaults": {
+    "project": 1,
+    "env": 1
+  },
+  "actives": {
+    "project": 1,
+    "env": 1
+  },
+  "projects": [
+    {
+      "idx": 1,
+      "id": "772000000018085",
+      "name": "Shop",
+      "domain": {
+        "id": "50008057966",
+        "name": "shop-60013948380.development"
+      },
+      "env": [
+        {
+          "idx": 1,
+          "id": "60013948380",
+          "name": "Development",
+          "type": 3
+        }
+      ]
+    }
+  ]
+}
