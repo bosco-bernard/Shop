@@ -5,6 +5,8 @@ on:
     branches: [ main , aboutFeature ]
 jobs:  
   CI_Test: 
+    env:
+      YESNO: Y
     name: Integration Test
     runs-on: ubuntu-latest
     steps:
@@ -17,3 +19,4 @@ jobs:
           npm install -g zcatalyst-cli 
           catalyst --version
           catalyst login --force
+          echo "${YESNO}"
