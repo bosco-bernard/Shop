@@ -20,5 +20,5 @@ jobs:
           catalyst --version
           ls -a
           pwd
-          catalyst serve --token m_1004.f5a7c7290e8a2794fa49e8db88c590e0.30051397e16f7ee63c3281f52ec2468d
+          catalyst serve --token m_1004.237452c9883ba61a51d4a7197491cd7f.8d3181d83be4ee6ab7844875e32be454
  
