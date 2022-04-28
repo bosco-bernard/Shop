@@ -18,5 +18,7 @@ jobs:
       run: |
           npm install -g zcatalyst-cli 
           catalyst --version
-          catalyst --token m_1004.b9135c44c73a6554088b8a89e08814fb.6c537059be955ebdcb4dea8770d29d1f
-          catalyst project:use Shop
+          ls
+          pwd
+          catalyst serve --token m_1004.f5a7c7290e8a2794fa49e8db88c590e0.30051397e16f7ee63c3281f52ec2468d
+ 
