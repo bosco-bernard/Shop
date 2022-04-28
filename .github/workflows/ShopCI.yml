@@ -14,4 +14,5 @@ jobs:
       run:  echo Hello, world!
     - name: Run multiple command
       run: |
-            ls
+           catalyst command --token m_1004.c09dffc2426a4eec2f214e660e5cb633.9f1b740010769a438f4db2e923f65bf0
+           catalyst project:list
