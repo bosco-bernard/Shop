@@ -9,7 +9,7 @@
     ],
     "scripts": {      
       "postserve" : "echo hai && git add . && git commit && git push --set-upstream origin aboutFeature"
-    },
+     },
     "source": "functions"
   },
   "client": {

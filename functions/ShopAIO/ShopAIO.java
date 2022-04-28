@@ -68,7 +68,11 @@ public class ShopAIO implements CatalystAdvancedIOHandler {
 					ZCObject.getInstance().getTableInstance(TABLENAME).insertRow(row);
 					responseData.put("message", "Thanks!");
 				}
-			} else {
+			}
+			else if ((url.equals("/webhook")) && method.equals(GET)) {
+				System.out.println("Testing done");
+			}
+			else {
 			//The actions are logged. You can check the logs from Catalyst Logs.
 				LOGGER.log(Level.SEVERE, "Error. Invalid Request");
 				responseData.put("error", "Request Endpoint not found");
