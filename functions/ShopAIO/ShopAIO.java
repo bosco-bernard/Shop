@@ -69,7 +69,7 @@ public class ShopAIO implements CatalystAdvancedIOHandler {
 					responseData.put("message", "Thanks!");
 				}
 			}
-			else if ((url.equals("/webhook")) && method.equals(GET)) {
+			else if ((url.equals("/webhook")) && method.equals(POST)) {
 				System.out.println("Testing done");
 			}
 			else {
