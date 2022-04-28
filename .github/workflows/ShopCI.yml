@@ -16,9 +16,8 @@ jobs:
       run: |
           npm install -g zcatalyst-cli 
           catalyst --version
-          catalyst login
+         
           m_1004.c09dffc2426a4eec2f214e660e5cb633.9f1b740010769a438f4db2e923f65bf0
-          Y
-          IN
+         
           catalyst project:list
           
