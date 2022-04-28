@@ -1,37 +1,37 @@
-[debug] [2022-04-28T13:11:59.904Z] : 
-[debug] [2022-04-28T13:11:59.905Z] : ----------------------------------------------------------------------
-[debug] [2022-04-28T13:11:59.905Z] : Command:      /usr/bin/node /usr/bin/catalyst serve
-[debug] [2022-04-28T13:11:59.905Z] : CLI Version:  1.12.1
-[debug] [2022-04-28T13:11:59.906Z] : Platform:     linux
-[debug] [2022-04-28T13:11:59.906Z] : Node Version: v16.14.2
-[debug] [2022-04-28T13:11:59.907Z] : Time:         Thu Apr 28 2022 18:41:59 GMT+0530 (India Standard Time)
-[debug] [2022-04-28T13:11:59.907Z] : ----------------------------------------------------------------------
-[debug] [2022-04-28T13:11:59.907Z] : 
-[debug] [2022-04-28T13:12:00.325Z] : > authorizing via signed-in user option
-[debug] [2022-04-28T13:12:00.326Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL","ZohoCatalyst.functions.ALL","ZohoCatalyst.functions.EXECUTE","ZohoCatalyst.webapp.ALL"]
-[debug] [2022-04-28T13:12:00.336Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.in/baas/v1/project/772000000018085 
+[debug] [2022-04-28T13:18:04.220Z] : 
+[debug] [2022-04-28T13:18:04.222Z] : ----------------------------------------------------------------------
+[debug] [2022-04-28T13:18:04.222Z] : Command:      /usr/bin/node /usr/bin/catalyst serve
+[debug] [2022-04-28T13:18:04.222Z] : CLI Version:  1.12.1
+[debug] [2022-04-28T13:18:04.223Z] : Platform:     linux
+[debug] [2022-04-28T13:18:04.223Z] : Node Version: v16.14.2
+[debug] [2022-04-28T13:18:04.224Z] : Time:         Thu Apr 28 2022 18:48:04 GMT+0530 (India Standard Time)
+[debug] [2022-04-28T13:18:04.224Z] : ----------------------------------------------------------------------
+[debug] [2022-04-28T13:18:04.224Z] : 
+[debug] [2022-04-28T13:18:04.656Z] : > authorizing via signed-in user option
+[debug] [2022-04-28T13:18:04.657Z] : > command requires scopes: ["ZohoCatalyst.projects.ALL","ZohoCatalyst.functions.ALL","ZohoCatalyst.functions.EXECUTE","ZohoCatalyst.webapp.ALL"]
+[debug] [2022-04-28T13:18:04.667Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.in/baas/v1/project/772000000018085 
 
-[debug] [2022-04-28T13:12:00.489Z] : <<<< HTTP RESPONSE : 200
-Response Headers: {"server":"ZGS","date":"Thu, 28 Apr 2022 13:12:32 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"close","set-cookie":["3a750b85f1=7c58023b2365c117e2ff9b6feb09efa2; Path=/","ZD_CSRF_TOKEN=4e312fde-92d8-4649-b62f-cfb4adb3ca77;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=4e312fde-92d8-4649-b62f-cfb4adb3ca77;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","pragma":"no-cache","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+[debug] [2022-04-28T13:18:04.864Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Thu, 28 Apr 2022 13:18:36 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"close","set-cookie":["3a750b85f1=99131cfabfda186b4fe68a16fb8fedd6; Path=/","ZD_CSRF_TOKEN=4a0949c1-3342-4fd6-b728-9038ac2a4f87;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=4a0949c1-3342-4fd6-b728-9038ac2a4f87;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","pragma":"no-cache","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
 
-[debug] [2022-04-28T13:12:00.495Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.in/baas/v1/project/772000000018085/environment 
+[debug] [2022-04-28T13:18:04.873Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.in/baas/v1/project/772000000018085/environment 
 
-[debug] [2022-04-28T13:12:00.651Z] : <<<< HTTP RESPONSE : 200
-Response Headers: {"server":"ZGS","date":"Thu, 28 Apr 2022 13:12:32 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"close","set-cookie":["3a750b85f1=99131cfabfda186b4fe68a16fb8fedd6; Path=/","ZD_CSRF_TOKEN=b872eede-9321-4c20-a913-c46a12123af4;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=b872eede-9321-4c20-a913-c46a12123af4;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","pragma":"no-cache","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+[debug] [2022-04-28T13:18:05.023Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Thu, 28 Apr 2022 13:18:37 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"close","set-cookie":["3a750b85f1=99131cfabfda186b4fe68a16fb8fedd6; Path=/","ZD_CSRF_TOKEN=c3617866-bb52-4218-8955-7f28c6f7db5c;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=c3617866-bb52-4218-8955-7f28c6f7db5c;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","pragma":"no-cache","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
 
-[debug] [2022-04-28T13:12:00.737Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.in/baas/v1/project/772000000018085/function 
+[debug] [2022-04-28T13:18:05.111Z] : >>>> HTTP REQUEST : GET https://api.catalyst.zoho.in/baas/v1/project/772000000018085/function 
 Query params: {"type":"basicio,event,cron,applogic,integration"}
 
-[debug] [2022-04-28T13:12:00.878Z] : <<<< HTTP RESPONSE : 200
-Response Headers: {"server":"ZGS","date":"Thu, 28 Apr 2022 13:12:32 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"close","set-cookie":["3a750b85f1=99131cfabfda186b4fe68a16fb8fedd6; Path=/","ZD_CSRF_TOKEN=28cf06e3-f6b2-49d0-bd23-d6b141796553;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=28cf06e3-f6b2-49d0-bd23-d6b141796553;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","pragma":"no-cache","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
+[debug] [2022-04-28T13:18:05.280Z] : <<<< HTTP RESPONSE : 200
+Response Headers: {"server":"ZGS","date":"Thu, 28 Apr 2022 13:18:37 GMT","content-type":"application/vnd.catalyst.v2+json","transfer-encoding":"chunked","connection":"close","set-cookie":["3a750b85f1=7c58023b2365c117e2ff9b6feb09efa2; Path=/","ZD_CSRF_TOKEN=3e753cdf-a0c3-4032-8de5-59bc4468289d;path=/;SameSite=None;Secure;priority=high","_zcsr_tmp=3e753cdf-a0c3-4032-8de5-59bc4468289d;path=/;SameSite=Strict;Secure;priority=high"],"x-content-type-options":"nosniff","x-xss-protection":"1","pragma":"no-cache","cache-control":"private,no-cache,no-store,max-age=0,must-revalidate","expires":"Thu, 01 Jan 1970 00:00:00 GMT","x-frame-options":"DENY","strict-transport-security":"max-age=63072000"}
 
-[debug] [2022-04-28T13:12:00.883Z] : unknown eol undefined hence skipping check
-[debug] [2022-04-28T13:12:00.883Z] : unknown eol undefined hence skipping check
-[info] [2022-04-28T13:12:01.057Z] : Compiling /home/bosco/ZCatalyst/Shop/Shop/functions/ShopAIO/ShopAIO.java
-[warn] [2022-04-28T13:12:01.749Z] : ⚠ skipping serve of function [Actions] since invalid function type. Only basicio,advancedio are supported.
-[info] [2022-04-28T13:12:02.456Z] : ℹ server[ShopAIO]: URL : http://localhost:3000/server/ShopAIO/
-[info] [2022-04-28T13:12:02.457Z] : 
-[info] [2022-04-28T13:12:02.563Z] : ℹ client[ShpApp]: URL : http://localhost:3000/app/
-[info] [2022-04-28T13:12:07.020Z] : Shutting down server
-[debug] [2022-04-28T13:12:07.021Z] : client server closed
-[info] [2022-04-28T13:12:07.026Z] : 
+[debug] [2022-04-28T13:18:05.284Z] : unknown eol undefined hence skipping check
+[debug] [2022-04-28T13:18:05.285Z] : unknown eol undefined hence skipping check
+[info] [2022-04-28T13:18:05.459Z] : Compiling /home/bosco/ZCatalyst/Shop/Shop/functions/ShopAIO/ShopAIO.java
+[warn] [2022-04-28T13:18:06.142Z] : ⚠ skipping serve of function [Actions] since invalid function type. Only basicio,advancedio are supported.
+[info] [2022-04-28T13:18:06.872Z] : ℹ server[ShopAIO]: URL : http://localhost:3000/server/ShopAIO/
+[info] [2022-04-28T13:18:06.873Z] : 
+[info] [2022-04-28T13:18:06.977Z] : ℹ client[ShpApp]: URL : http://localhost:3000/app/
+[info] [2022-04-28T13:18:09.749Z] : Shutting down server
+[debug] [2022-04-28T13:18:09.750Z] : client server closed
+[info] [2022-04-28T13:18:09.756Z] : 

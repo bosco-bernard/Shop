@@ -8,7 +8,7 @@
       ".output"
     ],
     "scripts": {      
-      "postserve" : "echo hai && git add . && git commit && git push --set-upstream origin aboutFeature"
+      "postserve" : "echo hai && git add . && git commit && git push"
      },
     "source": "functions"
   },
