@@ -8,6 +8,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.catalyst.advanced.CatalystAdvancedIOHandler;
+import com.zc.component.cache.ZCCache;
+import com.zc.component.cache.ZCCacheObject;
+import com.zc.component.cache.ZCSegment;
 import com.zc.component.object.ZCObject;
 import com.zc.component.object.ZCRowObject;
 import com.zc.component.zcql.ZCQL;
@@ -68,7 +71,14 @@ public class ShopAIO implements CatalystAdvancedIOHandler {
 					ZCObject.getInstance().getTableInstance(TABLENAME).insertRow(row);
 					responseData.put("message", "Thanks!");
 				}
-			} else {
+			} 
+			else if ((url.equals("/webhook")) && method.equals(POST)) {
+				System.out.println("Testing done");
+				ZCCache cacheobj=ZCCache.getInstance();
+				ZCSegment segment = cacheobj.getSegment(772000000022001L);
+				ZCCacheObject cache = segment.putCacheValue("Result", "Success");
+			}
+			else {
 			//The actions are logged. You can check the logs from Catalyst Logs.
 				LOGGER.log(Level.SEVERE, "Error. Invalid Request");
 				responseData.put("error", "Request Endpoint not found");

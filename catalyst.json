@@ -7,8 +7,8 @@
     "ignore": [
       ".output"
     ],
-    "scripts": {      
-      "postserve" : "echo hai"
+    "scripts": {
+      "postserve": "echo hai"
     },
     "source": "functions"
   },
