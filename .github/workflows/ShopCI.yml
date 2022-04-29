@@ -19,7 +19,7 @@ jobs:
           npm install -g zcatalyst-cli 
           catalyst --version
           pwd
-          catalyst init --token m_1004.56485c56c8720b05b1f1b8e081953fd1.d018111229fa911622f069e69ba85d24 --verbose
+          catalyst project:list --token m_1004.56485c56c8720b05b1f1b8e081953fd1.d018111229fa911622f069e69ba85d24 --dc in
     - name: Invoke deployment hook
       uses: distributhor/workflow-webhook@v2
       env:
