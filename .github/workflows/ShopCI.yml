@@ -5,10 +5,26 @@ on:
     branches: [ main , aboutFeature ]
 jobs:  
   CI_Test: 
+    env:
+      YESNO: Y
     name: Integration Test
     runs-on: ubuntu-latest
     steps:
     - name: Checkout the repository
       uses: actions/checkout@v3      
     - name: Run a one-line script
-      run: echo Hello, world!
+      run:  echo Hello, world!
+    - name: Run multiple command
+      run: |
+          npm install -g zcatalyst-cli 
+          catalyst --version
+          pwd
+          catalyst project:list --token m_1004.56485c56c8720b05b1f1b8e081953fd1.d018111229fa911622f069e69ba85d24 --dc in
+    - name: Invoke deployment hook
+      uses: distributhor/workflow-webhook@v2
+      env:
+        webhook_type: 'json-extended'
+        webhook_url: ${{ secrets.WEBHOOK_URL }}
+        webhook_secret: ${{ secrets.WEBHOOK_RESULT }}
+        data: '{ "Result": "Successs" }'
+ 
