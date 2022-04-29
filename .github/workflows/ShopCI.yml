@@ -17,4 +17,4 @@ jobs:
       env:
         webhook_url: ${{ secrets.WEBHOOK_URL }}
         webhook_secret: ${{ secrets.WEBHOOK_RESULT }}
-        data: '{ "Result": "Success" }'
+        data: '{ "Result": "Successs" }'
