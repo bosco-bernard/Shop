@@ -25,9 +25,7 @@ jobs:
     - name: Run a one-line script  
       if: steps.test_echo.outputs == 'success'
       run: echo "result = success" >> $GITHUB_ENV      
-    - name: Run a one-line script  
-      if: steps.test_echo.outputs == 'failure'
-      run: echo "result = failure" >> $GITHUB_ENV                  
+    
     - name: Invoke deployment hook
       uses: distributhor/workflow-webhook@v2
       env:
