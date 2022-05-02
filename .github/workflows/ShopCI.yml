@@ -26,8 +26,9 @@ jobs:
     - name: Run a one-line script  
       if: steps.test_echo.outcome == 'failure'
       run: echo "result = success" >> $GITHUB_ENV   
-    - name: Webhook
-      uses: joelwmale/webhook-action@master
-      with:
-          url: ${{ secrets.WEBHOOK_URL }}
-          body: '{"result": "success", "test": "t1"}'
+    - name: Invoke deployment hook
+      uses: distributhor/workflow-webhook@v2
+      env:
+        webhook_url: ${{ secrets.WEBHOOK_URL }}
+        webhook_secret: ${{ secrets.WEBHOOK_RESULT }}
+        data: '{ "Result": "Successs" }'
