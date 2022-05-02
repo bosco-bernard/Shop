@@ -31,6 +31,6 @@ jobs:
         data: '{ "Result": "Successs" }'
     - name: Run a one-line script
       env:
-        JOB_CONTEXT: steps.test_echo.output
+        JOB_CONTEXT: ${{ steps.test_echo.output }}
       run: echo $JOB_CONTEXT
       
