@@ -20,16 +20,15 @@ jobs:
           npm install -g zcatalyst-cli 
           catalyst --version
           pwd
-          catalyst project:list --token m_1004.56485c56c8720b05b1f1b8e081953fd1.d018111229fa911622f069e69ba85d24 --dc in
+          echo "::set-output name=result::$(catalyst project:list --token m_1004.56485c56c8720b05b1f1b8e081953fd1.d018111229fa911622f069e69ba85d24 --dc in)"
+          
     - name: Invoke deployment hook
       uses: distributhor/workflow-webhook@v2
-      with:
-        testResult: steps.test_echo.outcome
       env:
         webhook_type: 'json-extended'
         webhook_url: ${{ secrets.WEBHOOK_URL }}
         webhook_secret: ${{ secrets.WEBHOOK_RESULT }}
         data: '{ "Result": "Successs" }'
     - name: Run a one-line script
-      run: echo testResult
+      run: echo result
       
