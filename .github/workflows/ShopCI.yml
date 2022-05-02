@@ -34,6 +34,4 @@ jobs:
         webhook_secret: ${{ secrets.WEBHOOK_RESULT }}
         data: '{ "Result": "Successs" }'
     - name: ts
-      run:  echo  hello
-            
-      
+      run:  echo ${{CI_Test.outputs.output1}}
