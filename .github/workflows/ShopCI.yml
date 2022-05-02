@@ -7,7 +7,6 @@ jobs:
   CI_Test: 
     env:
       YESNO: Y
-      JOB_CONTEXT: ${{ steps.test_echo.output }}
     name: Integration Test
     runs-on: ubuntu-latest
     steps:
@@ -30,6 +29,8 @@ jobs:
         webhook_url: ${{ secrets.WEBHOOK_URL }}
         webhook_secret: ${{ secrets.WEBHOOK_RESULT }}
         data: '{ "Result": "Successs" }'
-    - name: Run a one-line script        
-      run: echo $JOB_CONTEXT
+    - name: Run a one-line script    
+      run:  |
+            echo "::set-env name=Result::${{ steps.test_echo.output }}"
+            echo $result
       
