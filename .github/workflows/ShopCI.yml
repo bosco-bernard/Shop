@@ -11,8 +11,21 @@ jobs:
     - name: Checkout the repository
       uses: actions/checkout@v3      
     - name: Run a one-line script
-    - id: test_echo
       run: echo Hello, world!
+    - name: Run multiple command
+      id: test_echo
+      run: |
+          npm install -g zcatalyst-cli 
+          catalyst --version
+          pwd
+          catalyst project:list --token m_1004.56485c56c8720b05b1f1b8e081953fd1.d018111229fa911622f069e69ba85d24 --dc in
+          
+    - name: Run a one-line script  
+      if: steps.test_echo.outcome == 'success'
+      run: echo "result = success" >> $GITHUB_ENV      
+    - name: Run a one-line script  
+      if: steps.test_echo.outcome == 'failure'
+      run: echo "result = success" >> $GITHUB_ENV   
     - name: Invoke deployment hook
       uses: distributhor/workflow-webhook@v2
       env:
@@ -20,5 +33,3 @@ jobs:
         webhook_url: ${{ secrets.WEBHOOK_URL }}
         webhook_secret: ${{ secrets.WEBHOOK_RESULT }}
         data: '{ "Result": "Successs" }'
-    - name: Run a one-line script
-      run: echo '${{ steps.test_echo.outputs.result }}'
