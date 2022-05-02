@@ -21,6 +21,7 @@ jobs:
           catalyst --version
           pwd
           catalyst project:list --token m_1004.56485c56c8720b05b1f1b8e081953fd1.d018111229fa911622f069e69ba85d24 --dc in
+          echo "::set-output name=sample::$({steps.test_echo.output)"
           
     - name: Invoke deployment hook
       uses: distributhor/workflow-webhook@v2
@@ -30,8 +31,8 @@ jobs:
         webhook_secret: ${{ secrets.WEBHOOK_RESULT }}
         data: '{ "Result": "Successs" }'
     - name: Run a one-line script  
-      run:  echo "sample=$(echo ${{steps.test_echo.output }})" >> $GITHUB_ENV
+      run:  echo "$sample"
     - name: ts
-      run:  echo  "$sample"
+      run:  echo  "$$sample"
             
       
