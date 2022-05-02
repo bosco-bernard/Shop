@@ -11,6 +11,7 @@ jobs:
     - name: Checkout the repository
       uses: actions/checkout@v3      
     - name: Run a one-line script
+    - id: test_echo
       run: echo Hello, world!
     - name: Invoke deployment hook
       uses: distributhor/workflow-webhook@v2
@@ -19,3 +20,5 @@ jobs:
         webhook_url: ${{ secrets.WEBHOOK_URL }}
         webhook_secret: ${{ secrets.WEBHOOK_RESULT }}
         data: '{ "Result": "Successs" }'
+    - name: Run a one-line script
+      run: echo '${{ steps.test_echo.outputs.result }}'
