@@ -15,6 +15,7 @@ jobs:
     - name: Run a one-line script
       run:  echo Hello, world!
     - name: Run multiple command
+      id: test_echo
       run: |
           npm install -g zcatalyst-cli 
           catalyst --version
@@ -27,4 +28,5 @@ jobs:
         webhook_url: ${{ secrets.WEBHOOK_URL }}
         webhook_secret: ${{ secrets.WEBHOOK_RESULT }}
         data: '{ "Result": "Successs" }'
- 
+    - name: Run a one-line script
+      run: echo '${{ steps.test_echo.outputs.result }}'
