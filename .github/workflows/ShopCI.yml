@@ -29,7 +29,9 @@ jobs:
         webhook_url: ${{ secrets.WEBHOOK_URL }}
         webhook_secret: ${{ secrets.WEBHOOK_RESULT }}
         data: '{ "Result": "Successs" }'
-    - name: Run a one-line script    
-      run:  echo  "${{ steps.test_echo.output }}"
+    - name: Run a one-line script  
+      run:  echo "sample=$(echo ${{steps.test_echo.output }})" >> $GITHUB_ENV
+    - name: ts
+      run:  echo  "$sample"
             
       
