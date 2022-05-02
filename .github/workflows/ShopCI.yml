@@ -9,6 +9,8 @@ jobs:
       YESNO: Y
     name: Integration Test
     runs-on: ubuntu-latest
+    outputs:
+      output1: ${{ steps.test_echo.outputs.test }}
     steps:
     - name: Checkout the repository
       uses: actions/checkout@v3      
@@ -20,7 +22,10 @@ jobs:
           npm install -g zcatalyst-cli 
           catalyst --version
           pwd
-          catalyst project:list --token m_1004.56485c56c8720b05b1f1b8e081953fd1.d018111229fa911622f069e69ba85d24 --dc in          
+          catalyst project:list --token m_1004.56485c56c8720b05b1f1b8e081953fd1.d018111229fa911622f069e69ba85d24 --dc in
+          
+    - name: Run a one-line script  
+      run:  echo "::set-output name=test::hello"
     - name: Invoke deployment hook
       uses: distributhor/workflow-webhook@v2
       env:
@@ -28,10 +33,7 @@ jobs:
         webhook_url: ${{ secrets.WEBHOOK_URL }}
         webhook_secret: ${{ secrets.WEBHOOK_RESULT }}
         data: '{ "Result": "Successs" }'
-    - name: Run a one-line script  
-      run:  echo "::set-output name=sample::$(steps.test_echo.output)"
-            echo "$sample"
     - name: ts
-      run:  echo  "$sample"
+      run:  echo  hello
             
       
